@@ -10,6 +10,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
+
+
 import utilities.PropertiesHandler;
 
 public class Base 	
@@ -70,8 +72,8 @@ public class Base
 		driver.get(url);			
 	}
 	
-	public void clickIcon(String path) {
-        WebElement icon = driver.findElement(By.xpath(path)); 
+	public void clickIcon(WebElement icon) {
+        //WebElement icon = driver.findElement(By.xpath(path)); 
 
         icon.click();
         System.out.println("Icon clicked successfully.");
