@@ -1,22 +1,19 @@
 package pages;
 
 import java.io.IOException;
+import java.time.Duration;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
-
-
-
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.PropertiesHandler;
 
 public class Base 	
 {
 	public WebDriver driver;
+	public WebDriverWait wait;
 	private PropertiesHandler ph = new PropertiesHandler();
 	
 	public Base() {
@@ -51,7 +48,9 @@ public class Base
 				driver = new ChromeDriver();
 				break;
 			};
-		
+			
+			wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -69,23 +68,6 @@ public class Base
 			e.printStackTrace();
 		}
 		driver.manage().window().maximize();
-		driver.get(url);			
+		driver.get(url);
 	}
-	
-	public void clickIcon(WebElement icon) {
-        //WebElement icon = driver.findElement(By.xpath(path)); 
-
-        icon.click();
-        System.out.println("Icon clicked successfully.");
-	}
-	
-	public void testIconIsClickable(String path) {
-        WebElement icon = driver.findElement(By.xpath(path)); 
-        
-        Assert.assertTrue(icon.isDisplayed(), "Icon is not displayed.");
-        Assert.assertTrue(icon.isEnabled(), "Icon is not enabled.");
-
-        icon.click();
-        System.out.println("Icon clicked successfully.");
-    }
 }

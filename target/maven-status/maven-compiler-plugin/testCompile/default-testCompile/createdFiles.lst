@@ -1,3 +1,4 @@
-pages\ElementsTextBox.class
 utilities\PropertiesHandler.class
+tests\ElementsTextBoxPageTest.class
+pages\ElementsTextBoxPage.class
 pages\Base.class
