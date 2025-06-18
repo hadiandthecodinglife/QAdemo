@@ -1,7 +1,7 @@
 package pages;
 
 
-
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -29,14 +29,15 @@ public class ElementsTextBoxPage extends Base{
 	@FindBy(css = "#permanentAddress")
 	private WebElement permenantAddressBox;
 	
-	@FindBy(css = "#submit")
+	@FindBy(xpath = "//*[@id=\"submit\"]")
 	private WebElement submitButton;
-    
+	
+	@FindBy(xpath = "//*[@id=\"output\"]/div")
+	private WebElement detailsSubmitted;
 	
 	public ElementsTextBoxPage(){
     	super();
     	PageFactory.initElements(driver, this);
-    	//clickTextBox();
 	}
 	
 	public void clickTextBox() {
@@ -62,7 +63,14 @@ public class ElementsTextBoxPage extends Base{
 	}
 	
 	public void clickSubmit() {
+		wait.until(ExpectedConditions.visibilityOf(submitButton));
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", submitButton);
+		
 		wait.until(ExpectedConditions.elementToBeClickable(submitButton));
 		submitButton.click();
+	}
+	
+	public String getSubmittedDetails() {
+		return detailsSubmitted.getText();
 	}
 }

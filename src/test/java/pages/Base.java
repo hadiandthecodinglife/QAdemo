@@ -3,11 +3,17 @@ package pages;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+
 import utilities.PropertiesHandler;
 
 public class Base 	
@@ -15,6 +21,8 @@ public class Base
 	public WebDriver driver;
 	public WebDriverWait wait;
 	private PropertiesHandler ph = new PropertiesHandler();
+	
+	private static final Logger logger = LogManager.getLogger(Base.class);
 	
 	public Base() {
 		initiateDriver();
@@ -25,7 +33,6 @@ public class Base
     {
 		try {
 			String browser = ph.getproperty("browser");
-			System.out.println("Browser of choice: " + browser);
 			
 			switch (browser.toLowerCase()) {
 			case "chrome":
@@ -50,11 +57,10 @@ public class Base
 			};
 			
 			wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			logger.info("{} driver initialized successfully.", browser);
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println("catch base");
+			logger.error("Failed to initiate WebDriver due to IOException", e);
 		}
         return driver;
     }
@@ -64,10 +70,15 @@ public class Base
 		try {
 			url = ph.getproperty("url");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error("Failed to load URL from properties", e);
 		}
-		driver.manage().window().maximize();
-		driver.get(url);
+		
+		if (url != null) {
+            driver.manage().window().maximize();
+            driver.get(url);
+            logger.info("Navigated to homepage: {}", url);
+        } else {
+            logger.warn("No URL was provided—homepage not loaded.");
+        }
 	}
 }
