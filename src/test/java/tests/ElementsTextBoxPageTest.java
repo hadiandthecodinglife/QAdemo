@@ -11,9 +11,10 @@ import org.testng.annotations.Test;
 import pages.ElementsTextBoxPage;
 
 
-public class ElementsTextBoxPageTest {
+public class ElementsTextBoxPageTest extends BaseTest{
 
     private ElementsTextBoxPage textBoxPage;
+    
     private String fullName = "Hadi Baloch";
     private String validEmail = "hadi@example.com";
     private String invalidEmail = "invalid email";
@@ -24,56 +25,61 @@ public class ElementsTextBoxPageTest {
     
     @BeforeMethod
     public void setUp() {
-        textBoxPage = new ElementsTextBoxPage();
+    	textBoxPage = new ElementsTextBoxPage();
     }
 
    @Test
     public void canSubmitWithValidDetails() {
-    	
-    	logger.info("Starting test: testFillTextBoxForm");
+   		test = extent.createTest("Testing the Text Box page with Valid details");
+
+    	test.info("Starting test: submit with valid details");
 
         textBoxPage.clickTextBox();
-        logger.info("Clicked on the Text Box section.");
+        test.info("Opened on the Text Box section.");
 
         textBoxPage.inputForm(fullName, validEmail, currentAddress, permanentAddress);
-        logger.info("Form input entered: {}, {}, {}, {}", fullName, validEmail, currentAddress, permanentAddress);
-
+        test.info("Form input entered:\n name: " + fullName + "\nemail: " + validEmail + "\nca: " + currentAddress + "\npa: " + permanentAddress);
+        
         textBoxPage.clickSubmit();
-        logger.info("Form submitted");
+        test.pass("Form submitted");
         
         String detailsSubmitted = textBoxPage.getSubmittedDetails();
         
         Assert.assertTrue(detailsSubmitted.contains("Name:" + fullName));
+        test.pass("Correct name submitted");
+        
         Assert.assertTrue(detailsSubmitted.contains("Email:" + validEmail));
+        test.pass("Correct email submitted");
+        
         Assert.assertTrue(detailsSubmitted.contains("Current Address :" + currentAddress));
+        test.pass("Correct current address submitted");
+        
         Assert.assertTrue(detailsSubmitted.contains("Permananet Address :" + permanentAddress));
-       
-        logger.info("Form field assertions passed.");  
+        test.pass("Correct permanent address submitted");
+        test.pass("Test passed successfully");
     }
     
     @Test
     public void canNotSubmitWithInvalidEmail() {
+    	test = extent.createTest("Testing the Text Box page with an invalid email");
     	
     	logger.info("Starting test: testFillTextBoxForm");
-
+    	test.info("Starting test: submit with invalid email");
+    	
         textBoxPage.clickTextBox();
-        logger.info("Clicked on the Text Box section.");
+        test.info("Opened on the Text Box section.");
 
         textBoxPage.inputForm(fullName, invalidEmail, currentAddress, permanentAddress);
-        logger.debug("Form input entered: {}, {}, {}, {}", fullName, invalidEmail, currentAddress, permanentAddress);
-
+        test.info("Form input entered:\n name: " + fullName + "\nemail: " + invalidEmail + "\nca: " + currentAddress + "\npa: " + permanentAddress);
+        
         textBoxPage.clickSubmit();
-        logger.info("Form submitted");
+        test.info("Submission attemot made with an invalid email");
         
         String detailsSubmitted = textBoxPage.getSubmittedDetails();
-        logger.debug("Submission box details: " + detailsSubmitted);
         
         Assert.assertTrue(detailsSubmitted.isEmpty());
-        logger.info("Form field assertions passed.");  
+        test.pass("Test Passed, Submission not possible with an invalid email");
     }
-    
-    
-    
     
     @AfterMethod
     public void tearDown() {

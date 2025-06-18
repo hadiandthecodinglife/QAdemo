@@ -5,7 +5,9 @@
     <classes>
       <class name="tests.ElementsTextBoxPageTest">
         <methods>
+          <include name="tearDownExtent"/>
           <include name="canNotSubmitWithInvalidEmail"/>
+          <include name="setupExtent"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>

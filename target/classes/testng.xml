@@ -2,6 +2,7 @@
 <suite name="TextBoxTestSuite">
   <test name="TextBoxTest">
     <classes>
+      <class name="tests.BaseTest"/>
       <class name="tests.ElementsTextBoxPageTest"/>
     </classes>
   </test>

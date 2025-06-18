@@ -1,0 +1,15 @@
+2025-06-18 13:31:29 [main] INFO  Base - chrome driver initialized successfully.
+2025-06-18 13:31:30 [main] INFO  Base - Navigated to homepage: https://demoqa.com/books
+2025-06-18 13:31:30 [main] INFO  ElementsTextBoxPageTest - Starting test: testFillTextBoxForm
+2025-06-18 13:31:31 [main] INFO  ElementsTextBoxPageTest - Clicked on the Text Box section.
+2025-06-18 13:31:32 [main] INFO  ElementsTextBoxPageTest - Form submitted
+2025-06-18 13:31:32 [main] INFO  ElementsTextBoxPageTest - Form field assertions passed.
+2025-06-18 13:31:32 [main] INFO  ElementsTextBoxPageTest - Closing the browser and quitting WebDriver.
+2025-06-18 13:31:38 [main] INFO  Base - chrome driver initialized successfully.
+2025-06-18 13:31:39 [main] INFO  Base - Navigated to homepage: https://demoqa.com/books
+2025-06-18 13:31:39 [main] INFO  ElementsTextBoxPageTest - Starting test: testFillTextBoxForm
+2025-06-18 13:31:40 [main] INFO  ElementsTextBoxPageTest - Clicked on the Text Box section.
+2025-06-18 13:31:40 [main] INFO  ElementsTextBoxPageTest - Form input entered: Hadi Baloch, hadi@example.com, 22 London Road, 1 Guildford Road
+2025-06-18 13:31:40 [main] INFO  ElementsTextBoxPageTest - Form submitted
+2025-06-18 13:31:40 [main] INFO  ElementsTextBoxPageTest - Form field assertions passed.
+2025-06-18 13:31:40 [main] INFO  ElementsTextBoxPageTest - Closing the browser and quitting WebDriver.

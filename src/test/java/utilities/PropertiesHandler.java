@@ -15,18 +15,16 @@ public class PropertiesHandler {
 	
 	private String dir = System.getProperty("user.dir");
 	private String fs = File.separator;
-	private String srcTest = dir + fs + "src" + fs + "test" + fs + "java";
+	private String srcTest = dir + fs + "src" + fs + "test";
 	private String resources = srcTest + fs + "resources";
 	private String configFile = resources + fs + "config.properties";
 	
 	public String getproperty(String key) throws IOException{
 		
-		System.out.println(configFile);
 		try {
 			FileInputStream inputStream = new FileInputStream(configFile);
 			property.load(inputStream);
 			result = property.getProperty(key);
-			System.out.println(result);
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
