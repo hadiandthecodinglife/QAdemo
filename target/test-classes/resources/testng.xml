@@ -1,8 +1,0 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="TextBoxTestSuite">
-  <test name="TextBoxTest">
-    <classes>
-      <class name="tests.ElementsTextBoxPageTest"/>
-    </classes>
-  </test>
-</suite>
