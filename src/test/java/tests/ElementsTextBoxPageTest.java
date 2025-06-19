@@ -6,11 +6,14 @@ import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import pages.ElementsTextBoxPage;
+import utilities.TestListener;
 
 
+@Listeners(TestListener.class)
 public class ElementsTextBoxPageTest extends BaseTest{
 
     private ElementsTextBoxPage textBoxPage;
@@ -77,7 +80,7 @@ public class ElementsTextBoxPageTest extends BaseTest{
         
         String detailsSubmitted = textBoxPage.getSubmittedDetails();
         
-        Assert.assertTrue(detailsSubmitted.isEmpty());
+        Assert.assertFalse(detailsSubmitted.isEmpty());
         test.pass("Test Passed, Submission not possible with an invalid email");
     }
     

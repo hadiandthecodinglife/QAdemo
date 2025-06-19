@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Automation Report</title>
+<title></title>
 <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
@@ -32,7 +32,7 @@
 </ul>
 <ul class="nav-right">
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Selenium Test Results</span></a>
+<a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
 <a href="#"><span class="badge badge-primary">Jun 19, 2025 11:39:03 am</span></a>
@@ -67,6 +67,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -74,65 +75,48 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="2"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Testing the Text Box page with an invalid email</p>
+            <p class="name">canNotSubmitWithInvalidEmail</p>
             <p class="text-sm">
-              <span>11:39:10</span> / <span>00:00:01:148</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:39:10</span> / <span>00:00:01:387</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Testing the Text Box page with an invalid email</h5>
+<h5 class="test-status text-fail">canNotSubmitWithInvalidEmail</h5>
 <span class='badge badge-success'>06.19.2025 11:39:10</span>
-<span class='badge badge-danger'>06.19.2025 11:39:11</span>
-<span class='badge badge-default'>00:00:01:148</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-danger'>06.19.2025 11:39:12</span>
+<span class='badge badge-default'>00:00:01:387</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='src/test/screenshots/canNotSubmitWithInvalidEmail_20250619_113911.png' src="src/test/screenshots/canNotSubmitWithInvalidEmail_20250619_113911.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:39:10</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:39:12</td>
         <td>
-          Starting test: submit with invalid email
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:39:11</td>
-        <td>
-          Opened on the Text Box section.
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:39:11</td>
-        <td>
-          Form input entered:
- name: Hadi Baloch
-email: invalid email
-ca: 22 London Road
-pa: 1 Guildford Road
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:39:11</td>
-        <td>
-          Submission attemot made with an invalid email
+          Test Failed: canNotSubmitWithInvalidEmail
         </td>
       </tr>
   </tbody>
@@ -140,14 +124,14 @@ pa: 1 Guildford Road
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="4"
+        <li class="test-item"  status="pass" test-id="3"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Testing the Text Box page with Valid details</p>
+            <p class="name">canSubmitWithValidDetails</p>
             <p class="text-sm">
-              <span>11:39:22</span> / <span>00:00:01:061</span>
+              <span>11:39:22</span> / <span>00:00:01:063</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -155,11 +139,11 @@ pa: 1 Guildford Road
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Testing the Text Box page with Valid details</h5>
+<h5 class="test-status text-pass">canSubmitWithValidDetails</h5>
 <span class='badge badge-success'>06.19.2025 11:39:22</span>
 <span class='badge badge-danger'>06.19.2025 11:39:23</span>
-<span class='badge badge-default'>00:00:01:061</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default'>00:00:01:063</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -170,70 +154,10 @@ pa: 1 Guildford Road
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:39:22</td>
-        <td>
-          Starting test: submit with valid details
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:39:22</td>
-        <td>
-          Opened on the Text Box section.
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:39:23</td>
-        <td>
-          Form input entered:
- name: Hadi Baloch
-email: hadi@example.com
-ca: 22 London Road
-pa: 1 Guildford Road
-        </td>
-      </tr>
-      <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
         <td>11:39:23</td>
         <td>
-          Form submitted
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:39:23</td>
-        <td>
-          Correct name submitted
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:39:23</td>
-        <td>
-          Correct email submitted
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:39:23</td>
-        <td>
-          Correct current address submitted
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:39:23</td>
-        <td>
-          Correct permanent address submitted
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:39:23</td>
-        <td>
-          Test passed successfully
+          Test Passed: canSubmitWithValidDetails
         </td>
       </tr>
   </tbody>
@@ -267,13 +191,13 @@ pa: 1 Guildford Road
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>2</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -289,12 +213,12 @@ pa: 1 Guildford Road
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>2</b> tests passed
+<div><small data-tooltip='50%'>
+<b>1</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='50%'><b>1</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -312,10 +236,10 @@ pa: 1 Guildford Road
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='46%'><b>6</b> events passed</small></div>
+<div><small data-tooltip='50%'><b>1</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>7</b> others
+<small data-tooltip='50%'><b>1</b> events failed,
+<b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -331,7 +255,7 @@ pa: 1 Guildford Road
 </div></div>
 <script>
 var timeline = {
-"Testing the Text Box page with an invalid email":1.148,"Testing the Text Box page with Valid details":1.061
+"canNotSubmitWithInvalidEmail":1.387,"canSubmitWithValidDetails":1.063
 };
 </script>
 <div class="row">
@@ -340,8 +264,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 2,
-failParent: 0,
+passParent: 1,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -357,11 +281,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 6,
-failEvents: 0,
+passEvents: 1,
+failEvents: 1,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 7
+infoEvents: 0
 };
 </script>        </div>
       </div>
