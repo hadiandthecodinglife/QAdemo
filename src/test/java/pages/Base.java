@@ -24,11 +24,6 @@ public class Base
 	
 	private static final Logger logger = LogManager.getLogger(Base.class);
 	
-	public Base() {
-		initiateDriver();
-		homePage();	
-	}
-	
 	public WebDriver initiateDriver()
     {
 		try {

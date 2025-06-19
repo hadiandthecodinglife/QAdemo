@@ -4,8 +4,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -15,7 +13,7 @@ import utilities.TestListener;
 
 @Listeners(TestListener.class)
 public class ElementsTextBoxPageTest extends BaseTest{
-
+	
     private ElementsTextBoxPage textBoxPage;
     
     private String fullName = "Hadi Baloch";
@@ -25,15 +23,12 @@ public class ElementsTextBoxPageTest extends BaseTest{
     private String permanentAddress = "1 Guildford Road";
 
     private static final Logger logger = LogManager.getLogger(ElementsTextBoxPageTest.class);
-    
-    @BeforeMethod
-    public void setUp() {
-    	textBoxPage = new ElementsTextBoxPage();
-    }
 
-   @Test
+   @Test (priority=1)
     public void canSubmitWithValidDetails() {
-   		test = extent.createTest("Testing the Text Box page with Valid details");
+	    textBoxPage = new ElementsTextBoxPage(driver, wait);
+	   
+	    test = extent.createTest("Testing the Text Box page with Valid details");
 
     	test.info("Starting test: submit with valid details");
 
@@ -62,8 +57,10 @@ public class ElementsTextBoxPageTest extends BaseTest{
         test.pass("Test passed successfully");
     }
     
-    @Test
+    @Test (priority=2)
     public void canNotSubmitWithInvalidEmail() {
+    	textBoxPage = new ElementsTextBoxPage(driver, wait);
+    	
     	test = extent.createTest("Testing the Text Box page with an invalid email");
     	
     	logger.info("Starting test: testFillTextBoxForm");
@@ -82,13 +79,5 @@ public class ElementsTextBoxPageTest extends BaseTest{
         
         Assert.assertFalse(detailsSubmitted.isEmpty());
         test.pass("Test Passed, Submission not possible with an invalid email");
-    }
-    
-    @AfterMethod
-    public void tearDown() {
-        if (textBoxPage.driver != null) {
-        	logger.info("Closing the browser and quitting WebDriver.");
-            textBoxPage.driver.quit();
-        }
     }
 }

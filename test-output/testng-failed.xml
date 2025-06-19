@@ -8,10 +8,8 @@
           <include name="tearDownExtent"/>
           <include name="canNotSubmitWithInvalidEmail"/>
           <include name="setupExtent"/>
-          <include name="setUp"/>
-          <include name="teardown"/>
           <include name="tearDown"/>
-          <include name="setup"/>
+          <include name="setUp"/>
         </methods>
       </class> <!-- tests.ElementsTextBoxPageTest -->
     </classes>

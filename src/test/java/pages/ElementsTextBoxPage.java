@@ -2,14 +2,18 @@ package pages;
 
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class ElementsTextBoxPage extends Base{
+public class ElementsTextBoxPage{
 	
+	private WebDriverWait wait;
+	private WebDriver driver;
 	
 	@FindBy(xpath = "//*[@id=\"app\"]/div/div/div/div[1]/div/div/div[1]/span/div")
 	private WebElement element;
@@ -35,9 +39,10 @@ public class ElementsTextBoxPage extends Base{
 	@FindBy(xpath = "//*[@id=\"output\"]/div")
 	private WebElement detailsSubmitted;
 	
-	public ElementsTextBoxPage(){
-    	super();
-    	PageFactory.initElements(driver, this);
+	public ElementsTextBoxPage(WebDriver driver, WebDriverWait wait){
+    	this.driver = driver;
+		this.wait = wait;
+		PageFactory.initElements(driver, this);
 	}
 	
 	public void clickTextBox() {

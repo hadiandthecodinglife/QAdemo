@@ -2,24 +2,39 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-19T11:39:03 BST" name="Default suite" finished-at="2025-06-19T11:39:28 BST" duration-ms="24562">
+  <suite started-at="2025-06-19T14:29:08 BST" name="Default suite" finished-at="2025-06-19T14:29:34 BST" duration-ms="26139">
     <groups>
     </groups>
-    <test started-at="2025-06-19T11:39:03 BST" name="Default test" finished-at="2025-06-19T11:39:28 BST" duration-ms="24562">
+    <test started-at="2025-06-19T14:29:08 BST" name="Default test" finished-at="2025-06-19T14:29:34 BST" duration-ms="26139">
       <class name="tests.ElementsTextBoxPageTest">
-        <test-method is-config="true" signature="setupExtent()[pri:0, instance:tests.ElementsTextBoxPageTest@6af9fcb2]" started-at="2025-06-19T11:39:03 BST" name="setupExtent" finished-at="2025-06-19T11:39:03 BST" duration-ms="204" status="PASS">
+        <test-method is-config="true" signature="setupExtent()[pri:0, instance:tests.ElementsTextBoxPageTest@291a7e3c]" started-at="2025-06-19T14:29:08 BST" name="setupExtent" finished-at="2025-06-19T14:29:08 BST" duration-ms="154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupExtent -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.ElementsTextBoxPageTest@6af9fcb2]" started-at="2025-06-19T11:39:03 BST" name="setup" finished-at="2025-06-19T11:39:06 BST" duration-ms="3064" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ElementsTextBoxPageTest@6af9fcb2]" started-at="2025-06-19T11:39:06 BST" name="setUp" finished-at="2025-06-19T11:39:10 BST" duration-ms="4128" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ElementsTextBoxPageTest@291a7e3c]" started-at="2025-06-19T14:29:08 BST" name="setUp" finished-at="2025-06-19T14:29:13 BST" duration-ms="5158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="canNotSubmitWithInvalidEmail()[pri:0, instance:tests.ElementsTextBoxPageTest@6af9fcb2]" started-at="2025-06-19T11:39:10 BST" name="canNotSubmitWithInvalidEmail" finished-at="2025-06-19T11:39:11 BST" duration-ms="1214" status="FAIL">
+        <test-method signature="canSubmitWithValidDetails()[pri:1, instance:tests.ElementsTextBoxPageTest@291a7e3c]" started-at="2025-06-19T14:29:13 BST" name="canSubmitWithValidDetails" finished-at="2025-06-19T14:29:14 BST" duration-ms="793" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- canSubmitWithValidDetails -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.ElementsTextBoxPageTest@291a7e3c]" started-at="2025-06-19T14:29:14 BST" name="tearDown" finished-at="2025-06-19T14:29:17 BST" duration-ms="3390" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=canSubmitWithValidDetails status=SUCCESS method=ElementsTextBoxPageTest.canSubmitWithValidDetails()[pri:1, instance:tests.ElementsTextBoxPageTest@291a7e3c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ElementsTextBoxPageTest@291a7e3c]" started-at="2025-06-19T14:29:17 BST" name="setUp" finished-at="2025-06-19T14:29:22 BST" duration-ms="4268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="canNotSubmitWithInvalidEmail()[pri:2, instance:tests.ElementsTextBoxPageTest@291a7e3c]" started-at="2025-06-19T14:29:22 BST" name="canNotSubmitWithInvalidEmail" finished-at="2025-06-19T14:29:22 BST" duration-ms="781" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [false] but found [true]]]>
@@ -30,7 +45,7 @@ at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertFalse(Assert.java:79)
 at org.testng.Assert.assertFalse(Assert.java:89)
-at tests.ElementsTextBoxPageTest.canNotSubmitWithInvalidEmail(ElementsTextBoxPageTest.java:83)
+at tests.ElementsTextBoxPageTest.canNotSubmitWithInvalidEmail(ElementsTextBoxPageTest.java:80)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -65,35 +80,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- canNotSubmitWithInvalidEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ElementsTextBoxPageTest@6af9fcb2]" started-at="2025-06-19T11:39:12 BST" name="tearDown" finished-at="2025-06-19T11:39:14 BST" duration-ms="1989" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.ElementsTextBoxPageTest@291a7e3c]" started-at="2025-06-19T14:29:23 BST" name="tearDown" finished-at="2025-06-19T14:29:34 BST" duration-ms="11596" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=canNotSubmitWithInvalidEmail status=FAILURE method=ElementsTextBoxPageTest.canNotSubmitWithInvalidEmail()[pri:2, instance:tests.ElementsTextBoxPageTest@291a7e3c] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.ElementsTextBoxPageTest@6af9fcb2]" started-at="2025-06-19T11:39:14 BST" name="teardown" finished-at="2025-06-19T11:39:16 BST" duration-ms="2329" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.ElementsTextBoxPageTest@6af9fcb2]" started-at="2025-06-19T11:39:16 BST" name="setup" finished-at="2025-06-19T11:39:18 BST" duration-ms="2531" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ElementsTextBoxPageTest@6af9fcb2]" started-at="2025-06-19T11:39:18 BST" name="setUp" finished-at="2025-06-19T11:39:22 BST" duration-ms="3674" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="canSubmitWithValidDetails()[pri:0, instance:tests.ElementsTextBoxPageTest@6af9fcb2]" started-at="2025-06-19T11:39:22 BST" name="canSubmitWithValidDetails" finished-at="2025-06-19T11:39:23 BST" duration-ms="1062" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- canSubmitWithValidDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ElementsTextBoxPageTest@6af9fcb2]" started-at="2025-06-19T11:39:23 BST" name="tearDown" finished-at="2025-06-19T11:39:25 BST" duration-ms="1981" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.ElementsTextBoxPageTest@6af9fcb2]" started-at="2025-06-19T11:39:25 BST" name="teardown" finished-at="2025-06-19T11:39:28 BST" duration-ms="2358" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="tearDownExtent()[pri:0, instance:tests.ElementsTextBoxPageTest@6af9fcb2]" started-at="2025-06-19T11:39:28 BST" name="tearDownExtent" finished-at="2025-06-19T11:39:28 BST" duration-ms="84" status="PASS">
+        <test-method is-config="true" signature="tearDownExtent()[pri:0, instance:tests.ElementsTextBoxPageTest@291a7e3c]" started-at="2025-06-19T14:29:34 BST" name="tearDownExtent" finished-at="2025-06-19T14:29:34 BST" duration-ms="61" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownExtent -->
